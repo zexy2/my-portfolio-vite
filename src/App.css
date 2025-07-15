@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Sayfa yüksekliğini tam yapıyoruz */
+  width: 100%; /* Sayfa genişliğini tam yapıyoruz */
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+
+
+.container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  width: 101%; /* Genişliği de 100% yapıyoruz */
+  background: transparent;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+section, div[id] {
+  scroll-margin-top: 100px;
+}
