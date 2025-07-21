@@ -99,7 +99,7 @@ function App() {
       <About
         name="Zeki Akgül"
         title="Frontend Developer & Computer Engineering Student"
-        description="Manisa Celal Bayar Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Kafein Technology Studios'ta frontend developer stajyeri olarak çalışıyorum. Web geliştirme alanında kendimi sürekli geliştirmeye odaklanıyorum."
+        description="I am a Computer Engineering student at Manisa Celal Bayar University. I am working as a Frontend Developer Intern at Kafein Technology Studios. I am focused on continuously improving myself in the field of web development."
         university="Manisa Celal Bayar University"
         experience="Kafein Technology Studios - Frontend Developer Intern"
         github="https://github.com/zexy2"
