@@ -11,57 +11,58 @@ function Contact() {
     email: "",
     message: "",
   });
+
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
   const handleSubmit = () => {
-    console.log("HandleSubmit çalıştı!");
+    console.log("HandleSubmit executed!");
     console.log("Current values:", { name, email, message });
 
-    // Yeni: Error kontrolü
+    // New: Error checking
     const newErrors = {
       name: "",
       email: "",
       message: "",
     };
 
-    // İsim kontrolü
+    // Name validation
     if (!name.trim()) {
-      newErrors.name = "İsim zorunludur";
+      newErrors.name = "Name is required";
     }
 
-    // Email kontrolü
+    // Email validation
     if (!email.trim()) {
-      newErrors.email = "Email zorunludur";
+      newErrors.email = "Email is required";
     } else if (!validateEmail(email)) {
-      newErrors.email = "Geçerli bir email adresi girin";
+      newErrors.email = "Please enter a valid email address";
     }
 
-    // Mesaj kontrolü
+    // Message validation
     if (!message.trim()) {
-      newErrors.message = "Mesaj zorunludur";
+      newErrors.message = "Message is required";
     }
 
-    // Errors state'ini güncelle
+    // Update the errors state
     console.log("Setting errors:", newErrors);
     setErrors(newErrors);
 
-    // Eğer hata varsa, form gönderme
+    // If there are any errors, do not submit the form
     if (newErrors.name || newErrors.email || newErrors.message) {
-      return; // Form gönderme!
+      return; // Do not submit the form!
     }
 
-    // Başarılı gönderim
-    console.log("Form başarıyla gönderildi!");
-    console.log("İsim:", name);
+    // Successful submission
+    console.log("Form submitted successfully!");
+    console.log("Name:", name);
     console.log("Email:", email);
-    console.log("Mesaj:", message);
+    console.log("Message:", message);
 
-    alert("Mesajınız başarıyla gönderildi!");
+    alert("Your message has been sent successfully!");
 
-    // Formu ve hataları temizle
+    // Clear the form and errors
     setName("");
     setEmail("");
     setMessage("");
@@ -70,20 +71,20 @@ function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <h2>İletişim</h2>
+      <h2>Contact</h2>
       <div>
         <input
           type="text"
-          placeholder="İsminizi giriniz"
+          placeholder="Enter your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         {errors.name && <p className="error-message">{errors.name}</p>}
-        <p>İsim: {name}</p>
+        <p>Name: {name}</p>
 
         <input
           type="email"
-          placeholder="Emailinizi giriniz"
+          placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -92,15 +93,15 @@ function Contact() {
 
         <input
           type="text"
-          placeholder="Mesajınızı yazın"
+          placeholder="Write your message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
         {errors.message && <p className="error-message">{errors.message}</p>}
-        <p>Mesaj: {message}</p>
+        <p>Message: {message}</p>
 
         <button type="button" onClick={handleSubmit}>
-          Gönder
+          Send
         </button>
       </div>
     </section>
