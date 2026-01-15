@@ -1,12 +1,11 @@
-import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import ParticlesBackground from "./components/ParticlesBackground";
+
 function App() {
-  // Projects data - CV'nizdeki projeler
   const projectsData = [
     {
       id: 1,
