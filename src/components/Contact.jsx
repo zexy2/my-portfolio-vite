@@ -18,10 +18,6 @@ function Contact() {
   };
 
   const handleSubmit = () => {
-    console.log("HandleSubmit executed!");
-    console.log("Current values:", { name, email, message });
-
-    // New: Error checking
     const newErrors = {
       name: "",
       email: "",
@@ -45,24 +41,16 @@ function Contact() {
       newErrors.message = "Message is required";
     }
 
-    // Update the errors state
-    console.log("Setting errors:", newErrors);
     setErrors(newErrors);
 
     // If there are any errors, do not submit the form
     if (newErrors.name || newErrors.email || newErrors.message) {
-      return; // Do not submit the form!
+      return;
     }
-
-    // Successful submission
-    console.log("Form submitted successfully!");
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
 
     alert("Your message has been sent successfully!");
 
-    // Clear the form and errors
+    // Clear the form
     setName("");
     setEmail("");
     setMessage("");

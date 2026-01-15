@@ -4,8 +4,8 @@ This folder contains documentation assets for the portfolio project.
 
 ## Required Files
 
-| File | Description |
-|------|-------------|
+| File          | Description                                                  |
+| ------------- | ------------------------------------------------------------ |
 | `preview.png` | Main preview screenshot for README (recommended: 1200×630px) |
 
 ## How to Take Screenshot
